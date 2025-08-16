@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⛽ Fuel Tracking"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:layout_marginBottom="20dp" />
+
+        <EditText
+            android:id="@+id/etLastOdometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Odometer Reading (km)"
+            android:inputType="numberDecimal"
+            android:background="@drawable/stylish_input"
+            android:padding="12dp"
+            android:layout_marginBottom="15dp" />
+
+        <EditText
+            android:id="@+id/etCurrentOdometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Current Odometer Reading (km)"
+            android:inputType="numberDecimal"
+            android:background="@drawable/stylish_input"
+            android:padding="12dp"
+            android:layout_marginBottom="15dp" />
+
+        <EditText
+            android:id="@+id/etFuelAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fuel Amount (L)"
+            android:inputType="numberDecimal"
+            android:background="@drawable/stylish_input"
+            android:padding="12dp"
+            android:layout_marginBottom="15dp" />
+
+        <EditText
+            android:id="@+id/etFuelCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fuel Cost (৳)"
+            android:inputType="numberDecimal"
+            android:background="@drawable/stylish_input"
+            android:padding="12dp"
+            android:layout_marginBottom="15dp" />
+
+        <Button
+            android:id="@+id/btnSaveFuel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾 Save Entry"
+            android:textSize="18sp"
+            android:backgroundTint="#1976D2"
+            android:textColor="#FFFFFF"
+            android:padding="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/tvFuelResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your fuel log will appear here..."
+            android:textSize="16sp"
+            android:textColor="#333"
+            android:padding="10dp"
+            android:background="#E3F2FD"
+            android:gravity="center"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+</ScrollView>

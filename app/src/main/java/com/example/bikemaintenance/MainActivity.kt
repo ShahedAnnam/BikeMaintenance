@@ -10,9 +10,8 @@ import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import com.example.bikemaintenance.ui.*
-import com.example.bikemaintenance.ui.theme.BikeMaintenanceTheme
 import com.example.bikemaintenance.ui.components.TopBar
+import com.example.bikemaintenance.ui.*
 
 enum class Screen { Dashboard, Fuel, Service, Costs }
 
@@ -20,7 +19,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            BikeMaintenanceTheme {
+            MaterialTheme(
+                colorScheme = lightColorScheme(), // or darkColorScheme()
+            )  {
                 var currentScreen by remember { mutableStateOf(Screen.Dashboard) }
 
                 Scaffold(
@@ -53,7 +54,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                     }
-                ) { innerPadding ->  // <-- Fixed padding variable name
+                ) { innerPadding ->
                     Surface(
                         modifier = Modifier
                             .fillMaxSize()
